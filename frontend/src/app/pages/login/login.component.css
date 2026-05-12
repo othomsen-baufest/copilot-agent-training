@@ -1,0 +1,149 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #f6f9fc;
+}
+
+.mesh {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(245, 233, 212, 0.9) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 30% 10%, rgba(255, 180, 100, 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 60% at 70% 5%, rgba(180, 160, 255, 0.6) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 55% at 90% 20%, rgba(83, 58, 253, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 55% 30%, rgba(234, 34, 97, 0.25) 0%, transparent 55%),
+    #f6f9fc;
+  filter: blur(2px);
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-radius: 12px;
+  padding: 40px 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: rgba(0, 55, 112, 0.08) 0 8px 24px, rgba(0, 55, 112, 0.04) 0 2px 6px;
+}
+
+.logo-mark {
+  margin-bottom: 24px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.64px;
+  color: #0d253d;
+  margin: 0 0 8px 0;
+  line-height: 1.1;
+}
+
+.subheading {
+  font-size: 15px;
+  font-weight: 300;
+  color: #64748d;
+  margin: 0 0 32px 0;
+  line-height: 1.4;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #273951;
+  letter-spacing: -0.39px;
+}
+
+.input {
+  background: #ffffff;
+  color: #0d253d;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #a8c3de;
+  outline: none;
+  transition: border-color 0.15s ease;
+  min-height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #533afd;
+}
+
+.input--error {
+  border-color: #ea2261;
+}
+
+.field-error {
+  font-size: 13px;
+  color: #ea2261;
+  letter-spacing: -0.39px;
+}
+
+.error-banner {
+  background: rgba(234, 34, 97, 0.07);
+  border: 1px solid rgba(234, 34, 97, 0.25);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #ea2261;
+}
+
+.btn-primary {
+  background: #533afd;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  min-height: 40px;
+  transition: background 0.15s ease;
+  width: 100%;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #4434d4;
+}
+
+.btn-primary:active:not(:disabled) {
+  background: #2e2b8c;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin: 16px;
+    padding: 28px 24px;
+  }
+}
