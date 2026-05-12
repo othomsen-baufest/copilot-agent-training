@@ -21,14 +21,13 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (this.authService.isLoggedIn()) {
-      this.router.navigate(['/welcome']);
-      return;
-    }
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]]
     });
+    if (this.authService.isLoggedIn()) {
+      this.router.navigate(['/welcome']);
+    }
   }
 
   onSubmit(): void {

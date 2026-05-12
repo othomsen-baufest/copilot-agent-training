@@ -35,8 +35,8 @@ npm install
 
 ```bash
 npm start
-# or
-ng serve --proxy-config proxy.conf.json
+# or (proxy is already configured in angular.json)
+ng serve
 ```
 
 Navigate to `http://localhost:4200`.
