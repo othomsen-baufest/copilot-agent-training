@@ -13,7 +13,7 @@ A Stripe-inspired Angular application that provides authentication and a protect
 
 Follows the Stripe-inspired design language defined in `DESIGN.md`:
 - Font: Inter (Google Fonts) at weight 300/400 with `font-feature-settings: "ss01"`
-- Primary colour: `#533afd` (indigo)
+- Primary color: `#533afd` (indigo)
 - Gradient-mesh backdrop on auth surfaces
 - Pill-shaped buttons (`border-radius: 9999px`)
 - Form inputs with `border-radius: 6px`
