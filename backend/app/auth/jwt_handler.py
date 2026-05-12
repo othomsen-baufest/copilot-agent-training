@@ -10,12 +10,13 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_SECONDS = 300
 REFRESH_TOKEN_EXPIRE_SECONDS = 3600
 
-# Simulated user database with pre-hashed password
+# Simulated user database — password is "admin123" (bcrypt, rounds=12)
+_ADMIN_HASH: bytes = b"$2b$12$WqA9IzCy5Im6Lqk64j.DZ.C4kCBc8X8OOYdm6uIBf8D4LCFpJm3Qq"
+
 FAKE_USERS_DB = {
     "admin": {
         "username": "admin",
-        # bcrypt hash of "admin123"
-        "hashed_password": bcrypt.hashpw(b"admin123", bcrypt.gensalt()),
+        "hashed_password": _ADMIN_HASH,
     }
 }
 
